@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>響應式網頁設計作業</title>
+    <link rel="stylesheet" href="final.css">
+</head>
+<body>
+
+    <nav>
+        <div class="logo" id="logoText">11135028蔡緒嘉</div>
+        <div class="menu">
+            <a href="#">Apple</a>
+            <a href="#">Tesla</a>
+            <a href="#">Google</a>
+            <a href="#">Meta</a>
+            <a href="#" class="contact-btn">開始對話</a>
+        </div>
+    </nav>
+
+    <header>
+        <div class="header-left">
+            <h1 id="mainTitle">我的未來，由 <span id="dynamicName">蔡緒嘉</span> 主宰</h1>
+            <p>這是我在東吳大學基礎網頁設計課的第一個自製網站。我將學習使用響應式網頁設計的功能。</p>
+            
+            <div class="command-section">
+                <div class="input-group">
+                    <input type="text" id="commandInput" placeholder="輸入指令或代辦 (例如：淺色、代辦 買晚餐)">
+                    <input type="datetime-local" id="todo-time" class="time-picker">
+                    <button id="sendBtn" class="btn btn-primary">發送指令</button>
+                </div>
+                <p id="aiResponse" class="ai-text"></p>
+                <div id="progress-container" class="progress-container" style="display: none;">
+                    <div class="progress-text" id="progress-text">目前進度：共 0 項 / 已完成 0 項</div>
+                    <div class="progress-bar-bg">
+                        <div class="progress-bar-fill" id="progress-fill"></div>
+                    </div>
+                </div>
+                
+                <ul id="todo-list" class="todo-list"></ul>
+            </div>
+
+            <div class="buttons">
+                <button id="colorBtn" class="btn btn-primary">變換顏色</button>
+                <a href="#" class="btn btn-secondary">查看原始碼</a>
+            </div>
+        </div>
+        
+        <div class="header-right">
+            <img src="aipic.png" alt="AI設計圖片">
+        </div>
+    </header>
+
+    <script src="final.js"></script>
+    <script>
+    (function(){if(!window.chatbase||window.chatbase("getState")!=="initialized"){window.chatbase=(...arguments)=>{if(!window.chatbase.q){window.chatbase.q=[]}window.chatbase.q.push(arguments)};window.chatbase=new Proxy(window.chatbase,{get(target,prop){if(prop==="q"){return target.q}return(...args)=>target(prop,...args)}})}const onLoad=function(){const script=document.createElement("script");script.src="https://www.chatbase.co/embed.min.js";script.id="u3YgCz_OUHRN40fbDIwLF";script.domain="www.chatbase.co";document.body.appendChild(script)};if(document.readyState==="complete"){onLoad()}else{window.addEventListener("load",onLoad)}})();
+    </script>
+</body>
+</html>
